@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-cyan-400 font-mono antialiased;
+  }
+}
+
+@layer components {
+  .markdown-body h1, .markdown-body h2, .markdown-body h3 {
+    @apply font-bold mb-4 mt-6;
+  }
+  .markdown-body h1 {
+    @apply text-lg border-b border-zinc-800 pb-2 text-zinc-200 uppercase tracking-widest;
+  }
+  .markdown-body h2 {
+    @apply text-sm text-white uppercase tracking-widest;
+  }
+  .markdown-body h3 {
+    @apply text-xs text-zinc-200;
+  }
+  .markdown-body p {
+    @apply text-zinc-400 mb-4;
+  }
+  .markdown-body ul {
+    @apply list-none mb-4 space-y-2;
+  }
+  .markdown-body li {
+    @apply flex items-start gap-3 text-[11px] text-zinc-400;
+  }
+  .markdown-body li::before {
+    content: "✓";
+    @apply w-3 h-3 border border-cyan-500/50 flex items-center justify-center text-[8px] text-cyan-400 shrink-0 mt-0.5;
+  }
+  .markdown-body pre {
+    @apply bg-black/40 border border-zinc-800 p-3 rounded mt-2 mb-4;
+  }
+  .markdown-body code {
+    @apply text-[11px] font-mono text-emerald-400;
+  }
+  .markdown-body pre code {
+    @apply block text-emerald-400;
+  }
+  .markdown-body strong {
+    @apply text-zinc-200 font-bold;
+  }
+}

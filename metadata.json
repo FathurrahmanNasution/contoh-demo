@@ -1,0 +1,8 @@
+{
+  "name": "DocuPulse",
+  "description": "A high-tech terminal-style SPA for summarizing long technical documents, server logs, and meeting transcripts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
